@@ -1,6 +1,4 @@
 import React from "react";
-
-const name = "Amelia";
 class Welcome extends React.Component {
   render() {
     return (
