@@ -5,13 +5,15 @@ class Welcome extends React.Component {
     return (
       <>
         <p> Welcome, {this.props.name}!</p>
+        <p>Your age is {this.props.age}</p>
       </>
     );
   }
 }
 
 Welcome.defaultProps = {
-  name: "Anna",
+  name: "Amelia",
+  age: "39",
 };
 
 export default Welcome;
