@@ -24,7 +24,7 @@ export class UncontrolLogin extends React.Component {
         <h3>My Uncrontrolled Form</h3>
 
         <form ref={this._formRef} onSubmit={this.handleFormSubmit}>
-          <input name="username" defaultValue="Giulia" />
+          <input name="username" />
           <input name="password" type="password" />
           <input name="remember" type="checkbox" />
 
