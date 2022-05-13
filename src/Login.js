@@ -18,6 +18,14 @@ export class Login extends React.Component {
     });
   };
 
+  onLogin = () => {
+    this.setState({
+      username: "Amelia",
+      password: "yes6163",
+      remember: true,
+    });
+  };
+
   render() {
     return (
       <>
@@ -41,6 +49,7 @@ export class Login extends React.Component {
             onChange={this.handleInputChange}
           />
         </div>
+        <button onClick={this.onLogin}>Invio</button>
       </>
     );
   }
