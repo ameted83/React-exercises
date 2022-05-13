@@ -1,5 +1,4 @@
 import React from "react";
-
 export class ClickTracker extends React.Component {
   state = {
     clickButton: null,
@@ -15,13 +14,13 @@ export class ClickTracker extends React.Component {
     return (
       <div>
         <h1>Click me: {this.state.clickButton} </h1>
-        <button onClick={this.handleClickButton} name="button1">
+        <button name="button1" onClick={this.handleClickButton}>
           Button 1
         </button>
-        <button onClick={this.handleClickButton} name="button2">
+        <button name="button2" onClick={this.handleClickButton}>
           Button 2
         </button>
-        <button onClick={this.handleClickButton} name="button3">
+        <button name="button3" onClick={this.handleClickButton}>
           Button 3
         </button>
       </div>
