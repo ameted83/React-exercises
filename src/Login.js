@@ -26,6 +26,14 @@ export class Login extends React.Component {
     });
   };
 
+  handleResetState = () => {
+    this.setState({
+      username: "",
+      password: "",
+      remember: false,
+    });
+  };
+
   render() {
     return (
       <>
@@ -50,6 +58,7 @@ export class Login extends React.Component {
           />
         </div>
         <button onClick={this.onLogin}>Invio</button>
+        <button onClick={this.handleResetState}>Reset</button>
       </>
     );
   }
