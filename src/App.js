@@ -6,6 +6,7 @@ import { ClickTracker } from "./ClickTracker";
 import InteractiveWelcome from "./InteractiveWelcome";
 import { Login } from "./Login";
 import { UncontrolLogin } from "./UncontrolLogin";
+import { TodoList } from "./TodoList";
 
 export class App extends React.Component {
   render() {
@@ -18,6 +19,14 @@ export class App extends React.Component {
         <ClickTracker />
         <Login />
         <UncontrolLogin />
+        <TodoList
+          names={[
+            "Life is Beautiful",
+            "It's a nice day",
+            "I'm happy",
+            "I am home",
+          ]}
+        />
       </div>
     );
   }
