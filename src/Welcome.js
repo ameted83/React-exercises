@@ -5,7 +5,7 @@ class Welcome extends React.Component {
     return (
       <>
         <p>
-          Welcome, <strong>{this.props.name}</strong>!
+          Welcome, {name}!
         </p>
         <p>Your age is {this.props.age}</p>
       </>
