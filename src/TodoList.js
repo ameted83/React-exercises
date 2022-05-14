@@ -2,34 +2,33 @@ import React from "react";
 
 export class TodoList extends React.Component {
   state = {
-    newNames: [...this.props.names],
+    strings: ["Life is Beautiful", "It's a nice day", "I'm happy", "I am home"],
   };
 
   handleAddTodo = (event) => {
     event.preventDefault();
     const inputElement = event.target.elements.todo;
     const newEl = inputElement.value;
-    inputElement.value = "";
+
     this.setState((state) => {
       return {
-        newNames: [...state.newNames, newEl],
+        strings: [...state.strings, newEl],
       };
     });
   };
+
   render() {
     return (
       <>
-        <div>
-          <form onSubmit={this.handleAddTodo}>
-            <input name="todo"></input>
-            <button type="submit">Invio</button>
-          </form>
+        <form onSubmit={this.handleAddTodo}>
+          <input name="todo"></input>
           <ul>
-            {this.state.newNames.map((name) => (
-              <li>{name}</li>
+            {this.state.strings.map((string) => (
+              <li>{string}</li>
             ))}
           </ul>
-        </div>
+          <button type="submit">Invio</button>
+        </form>
       </>
     );
   }

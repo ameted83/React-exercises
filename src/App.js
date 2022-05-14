@@ -19,14 +19,7 @@ export class App extends React.Component {
         <ClickTracker />
         <Login />
         <UncontrolLogin />
-        <TodoList
-          names={[
-            "Life is Beautiful",
-            "It's a nice day",
-            "I'm happy",
-            "I am home",
-          ]}
-        />
+        <TodoList />
       </div>
     );
   }
