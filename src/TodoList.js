@@ -18,6 +18,13 @@ export class TodoList extends React.Component {
     });
   };
 
+  handleClickReset = (event) => {
+    event.preventDefault();
+    this.setState(() => {
+      return { strings: [] };
+    });
+  };
+
   render() {
     return (
       <>
@@ -30,6 +37,7 @@ export class TodoList extends React.Component {
           </ul>
           <button type="submit">Invio</button>
         </form>
+        <button onClick={this.handleClickReset}>Reset</button>
       </>
     );
   }
