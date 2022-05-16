@@ -8,7 +8,13 @@ class Welcome extends React.Component {
           Welcome, <strong>{this.props.name}</strong>!
         </p>
         {/* <p>Your age is: {this.props.age}</p> */}
-        <Age age={33} name="Jhon" />
+        {this.props.age > 18 &&
+        this.props.age < 65 &&
+        this.props.name === "John" ? (
+          <Age age={this.props.age} name={this.props.name} />
+        ) : (
+          false
+        )}
       </>
     );
   }
