@@ -14,7 +14,7 @@ export class Login extends React.Component {
     const checked = event.target.checked;
 
     this.setState({
-      [name]: type === "checkbox" ? checked : console.log(value),
+      [name]: type === "checkbox" ? checked : value,
     });
   };
 
@@ -56,9 +56,16 @@ export class Login extends React.Component {
             checked={this.state.remember}
             onChange={this.handleInputChange}
           />
+          <button
+            style={{
+              backgroundColor: this.state.password.length < 8 ? "red" : "green",
+            }}
+            onClick={this.onLogin}
+          >
+            Invio
+          </button>
+          <button onClick={this.handleResetState}>Reset</button>
         </div>
-        <button onClick={this.onLogin}>Invio</button>
-        <button onClick={this.handleResetState}>Reset</button>
       </>
     );
   }
