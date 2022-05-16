@@ -3,6 +3,7 @@ import React from "react";
 export class TodoList extends React.Component {
   state = {
     todos: ["Studio React", "Vado a fare una passeggiata", "Leggo un libro"],
+    todo: "",
   };
 
   handleAddTodo = (event) => {
@@ -24,9 +25,10 @@ export class TodoList extends React.Component {
     });
   };
 
-  handleRemoveItem = () => {
+  handleRemoveItem = (event) => {
+    event.preventDefault();
     this.setState(() => {
-      return {};
+      return { todo: this.state.todos.pop() };
     });
   };
 
@@ -37,9 +39,9 @@ export class TodoList extends React.Component {
         <form onSubmit={this.handleAddTodo}>
           <input name="todo"></input>
           <ul>
-            {this.state.todos.map((todo) => (
-              <li>
-                {todo} <button onClick={this.handleRemoveItem}>X</button>
+            {this.state.todos.map((todo, index) => (
+              <li key={index}>
+                {todo},<button onClick={this.handleRemoveItem}>X</button>
               </li>
             ))}
           </ul>
