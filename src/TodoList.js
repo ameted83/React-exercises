@@ -2,18 +2,18 @@ import React from "react";
 
 export class TodoList extends React.Component {
   state = {
-    strings: ["Life is Beautiful", "It's a nice day", "I'm happy", "I am home"],
+    todos: ["Studio React", "Vado a fare una passeggiata", "Leggo un libro"],
   };
 
   handleAddTodo = (event) => {
     event.preventDefault();
-    const inputElement = event.target.elements.todo;
-    const newEl = inputElement.value;
-    inputElement.value = "";
+    const inputItem = event.target.elements.todo;
+    const newItem = inputItem.value;
+    inputItem.value = "";
 
     this.setState((state) => {
       return {
-        strings: [...state.strings, newEl],
+        todos: [...state.todos, newItem],
       };
     });
   };
@@ -21,23 +21,24 @@ export class TodoList extends React.Component {
   handleClickReset = (event) => {
     event.preventDefault();
     this.setState(() => {
-      return { strings: [] };
+      return { todos: [] };
     });
   };
 
   render() {
     return (
       <>
+        <h3>My TodoList</h3>
         <form onSubmit={this.handleAddTodo}>
           <input name="todo"></input>
           <ul>
-            {this.state.strings.map((string) => (
-              <li>{string}</li>
+            {this.state.todos.map((todo) => (
+              <li>{todo}</li>
             ))}
           </ul>
           <button type="submit">Invio</button>
+          <button onClick={this.handleClickReset}>Reset</button>
         </form>
-        <button onClick={this.handleClickReset}>Reset</button>
       </>
     );
   }
