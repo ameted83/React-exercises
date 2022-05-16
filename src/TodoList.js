@@ -36,8 +36,8 @@ export class TodoList extends React.Component {
             ))}
           </ul>
           <button type="submit">Invio</button>
+          <button onClick={this.handleClickReset}>Reset</button>
         </form>
-        <button onClick={this.handleClickReset}>Reset</button>
       </>
     );
   }
