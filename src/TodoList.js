@@ -24,6 +24,12 @@ export class TodoList extends React.Component {
     });
   };
 
+  handleRemoveItem = () => {
+    this.setState(() => {
+      return {};
+    });
+  };
+
   render() {
     return (
       <>
@@ -32,7 +38,9 @@ export class TodoList extends React.Component {
           <input name="todo"></input>
           <ul>
             {this.state.todos.map((todo) => (
-              <li>{todo}</li>
+              <li>
+                {todo} <button onClick={this.handleRemoveItem}>X</button>
+              </li>
             ))}
           </ul>
           <button type="submit">Invio</button>
