@@ -7,20 +7,23 @@ import InteractiveWelcome from "./InteractiveWelcome";
 import { Login } from "./Login";
 import { UncontrolLogin } from "./UncontrolLogin";
 import { TodoList } from "./TodoList";
+import { Container } from "./Container";
 
 export class App extends React.Component {
   render() {
     return (
-      <div>
-        <Hello />
-        <InteractiveWelcome />
-        <Counter />
-        <ClickCounter />
-        <ClickTracker />
-        <Login />
-        <UncontrolLogin />
-        <TodoList />
-      </div>
+      <>
+        <Container>
+          <Hello />
+          <InteractiveWelcome />
+          <Counter />
+          <ClickCounter />
+          <ClickTracker />
+          <Login />
+          <UncontrolLogin />
+          <TodoList />
+        </Container>
+      </>
     );
   }
 }

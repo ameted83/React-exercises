@@ -2,3 +2,8 @@
   background-color: yellowgreen;
   border: 3px solid rgb(22, 22, 22);
 }
+
+.componentsContainer {
+  background-color: white;
+  border: 3px solid red;
+}
