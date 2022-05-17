@@ -19,7 +19,8 @@ export class TodoList extends React.Component {
     });
   };
 
-  handleClickReset = () => {
+  handleClickReset = (event) => {
+    event.preventDefault();
     this.setState(() => {
       return { todos: [] };
     });

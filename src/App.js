@@ -27,19 +27,19 @@ export class App extends React.Component {
                 <div>
                   <form onSubmit={addItem}>
                     <input name="todo"></input>
+                    <ul>
+                      {todos.map((item, index) => {
+                        return (
+                          <>
+                            <li>{item}</li>
+                            <button onClick={() => removeItem(index)}>X</button>
+                          </>
+                        );
+                      })}
+                    </ul>
                     <button type="submit">Invio</button>
                     <button onClick={reset}>Reset</button>
                   </form>
-                  <ul>
-                    {todos.map((item, index) => {
-                      return (
-                        <div>
-                          <li>{item}</li>
-                          <button onClick={() => removeItem(index)}>X</button>
-                        </div>
-                      );
-                    })}
-                  </ul>
                 </div>
               );
             }}
