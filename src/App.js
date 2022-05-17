@@ -13,7 +13,7 @@ export class App extends React.Component {
   render() {
     return (
       <>
-        <Container>
+        <Container title={"My application"}>
           <Hello />
           <InteractiveWelcome />
           <Counter />
