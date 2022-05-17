@@ -30,10 +30,10 @@ export class App extends React.Component {
                     <ul>
                       {todos.map((item, index) => {
                         return (
-                          <>
-                            <li>{item}</li>
+                          <li>
+                            {item},
                             <button onClick={() => removeItem(index)}>X</button>
-                          </>
+                          </li>
                         );
                       })}
                     </ul>
