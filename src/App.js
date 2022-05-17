@@ -21,7 +21,29 @@ export class App extends React.Component {
           <ClickTracker />
           <Login />
           <UncontrolLogin />
-          <TodoList />
+          <TodoList
+            render={(todos, addItem, reset, removeItem) => {
+              return (
+                <div>
+                  <form onSubmit={addItem}>
+                    <input name="todo"></input>
+                    <button type="submit">Invio</button>
+                    <button onClick={reset}>Reset</button>
+                  </form>
+                  <ul>
+                    {todos.map((item, index) => {
+                      return (
+                        <div>
+                          <li>{item}</li>
+                          <button onClick={() => removeItem(index)}>X</button>
+                        </div>
+                      );
+                    })}
+                  </ul>
+                </div>
+              );
+            }}
+          />
         </Container>
       </>
     );

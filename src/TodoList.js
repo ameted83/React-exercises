@@ -25,8 +25,7 @@ export class TodoList extends React.Component {
     });
   };
 
-  handleRemoveItem = (event) => {
-    event.preventDefault();
+  handleRemoveItem = () => {
     this.setState(() => {
       return { todo: this.state.todos.pop() };
     });
@@ -36,18 +35,12 @@ export class TodoList extends React.Component {
     return (
       <>
         <h3>My todoList</h3>
-        <form onSubmit={this.handleAddTodo}>
-          <input name="todo"></input>
-          <ul>
-            {this.state.todos.map((todo, index) => (
-              <li key={index}>
-                {todo},<button onClick={this.handleRemoveItem}>X</button>
-              </li>
-            ))}
-          </ul>
-          <button type="submit">Invio</button>
-          <button onClick={this.handleClickReset}>Reset</button>
-        </form>
+        {this.props.render(
+          this.state.todos,
+          this.handleAddTodo,
+          this.handleClickReset,
+          this.handleRemoveItem
+        )}
       </>
     );
   }
