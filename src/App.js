@@ -11,6 +11,7 @@ import { Container } from "./Container";
 // import { DisplayLanguage } from "./DisplayLanguage";
 import { CreateLanguage } from "./CreateLanguage";
 import Sum from "./Sum";
+import GithubUser from "./GithubUser";
 
 export function App() {
   // state = {
@@ -71,6 +72,7 @@ export function App() {
         <Sum />
         {showCounter && <Counter />}
         <button onClick={handleToggleCounter}>Toggle Counter</button>
+        <GithubUser username="gianmarcotoso" />
       </Container>
       {/* </DisplayLanguage.Provider> */}
     </>
