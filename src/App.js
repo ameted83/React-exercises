@@ -10,6 +10,7 @@ import { TodoList } from "./TodoList";
 import { Container } from "./Container";
 import { DisplayLanguage } from "./DisplayLanguage";
 import { CreateLanguage } from "./CreateLanguage";
+import Sum from "./Sum";
 
 export class App extends React.Component {
   state = {
@@ -66,6 +67,7 @@ export class App extends React.Component {
               }}
             />
           </Container>
+          <Sum numbers={[1, 3, 5]} />
         </DisplayLanguage.Provider>
       </>
     );
