@@ -72,7 +72,7 @@ export function App() {
         <Sum />
         {showCounter && <Counter />}
         <button onClick={handleToggleCounter}>Toggle Counter</button>
-        <GithubUser username="gianmarcotoso" />
+        <GithubUser username="ameted83" />
       </Container>
       {/* </DisplayLanguage.Provider> */}
     </>
