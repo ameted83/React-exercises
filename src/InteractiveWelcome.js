@@ -10,7 +10,7 @@ class InteractiveWelcome extends React.Component {
     return (
       <>
         <input name="username" value={this.state.username}></input>
-        <Welcome value={this.props.name} />
+        <Welcome name="Amelia" />
       </>
     );
   }

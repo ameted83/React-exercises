@@ -15,7 +15,6 @@ export class CreateLanguage extends React.Component {
             return <h1>{Strings[language].CURRENT_LANGUAGE}</h1>;
           }}
         </DisplayLanguage.Consumer>
-        ;
       </div>
     );
   }
