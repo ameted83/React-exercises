@@ -1,72 +1,44 @@
-import React from "react";
+import React, { useState } from "react";
 
-export class Login extends React.Component {
-  state = {
+const Login = () => {
+  const [data, setData] = useState({
     username: "",
     password: "",
     remember: false,
-  };
+  });
 
-  handleInputChange = (event) => {
-    const value = event.target.value;
-    const name = event.target.name;
-    const type = event.target.type;
-    const checked = event.target.checked;
+  function handleInputChange(event) {
+    const { name, type, value, checked } = event.target;
 
-    this.setState({
-      [name]: type === "checkbox" ? checked : value,
+    setData({
+      [name]: type === "checbox" ? checked : value,
     });
-  };
-
-  onLogin = () => {
-    this.setState({
-      username: "Amelia",
-      password: "yes6163",
-      remember: true,
-    });
-  };
-
-  handleResetState = () => {
-    this.setState({
-      username: "",
-      password: "",
-      remember: false,
-    });
-  };
-
-  render() {
-    return (
-      <>
-        <h2>My Form</h2>
-        <div>
-          <input
-            name="username"
-            value={this.state.username}
-            onChange={this.handleInputChange}
-          />
-          <input
-            name="password"
-            type="password"
-            value={this.state.password}
-            onChange={this.handleInputChange}
-          />
-          <input
-            name="remember"
-            type="checkbox"
-            checked={this.state.remember}
-            onChange={this.handleInputChange}
-          />
-          <button
-            style={{
-              backgroundColor: this.state.password.length < 8 ? "red" : "green",
-            }}
-            onClick={this.onLogin}
-          >
-            Invio
-          </button>
-          <button onClick={this.handleResetState}>Reset</button>
-        </div>
-      </>
-    );
   }
-}
+
+  return (
+    <>
+      <h2>My Form</h2>
+      <div>
+        <input
+          name="username"
+          value={data.username}
+          onChange={handleInputChange}
+        />
+        <input
+          name="password"
+          type="password"
+          value={data.password}
+          onChange={handleInputChange}
+        />
+        <input
+          name="remember"
+          type="checkbox"
+          checked={data.remember}
+          onChange={handleInputChange}
+        />
+      </div>
+    </>
+  );
+};
+
+export default Login;
