@@ -1,4 +1,4 @@
-import { useGithubUser } from "./UserGithubUser";
+import { useGithubUser } from "./UseGithubUser";
 
 const GithubUser = ({ username }) => {
   const { data } = useGithubUser(username);
