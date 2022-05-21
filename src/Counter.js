@@ -1,20 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 // import CounterDisplay from "./CounterDisplay";
 
 function useCounter(initialValue = 0) {
   const [counter, setCounter] = useState(initialValue);
 
-  function onCounterChange() {
-    setCounter(counter + 1);
-  }
+  const onCounterChange = useCallback(function onCounterChange() {
+    setCounter((c) => c + 1);
+  }, []);
 
-  function onCounterDecrement() {
+  const onCounterDecrement = useCallback(function onCounterDecrement() {
     setCounter((c) => c - 1);
-  }
+  }, []);
 
-  function onCounterReset() {
-    setCounter(initialValue);
-  }
+  const onCounterReset = useCallback(
+    function onCounterReset() {
+      setCounter(initialValue);
+    },
+    [initialValue]
+  );
 
   return {
     counter: counter,
