@@ -24,10 +24,10 @@ class Counter extends React.Component {
   }
 }
 
-Counter.defaultProps = {
-  initialValue: 0,
-  incremet: 1,
-  timeout: 1000,
-};
+// Counter.defaultProps = {
+//   initialValue: 0,
+//   incremet: 1,
+//   timeout: 1000,
+// };
 
 export default Counter;
