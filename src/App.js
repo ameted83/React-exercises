@@ -1,17 +1,18 @@
-import React, { useState } from "react";
-import Hello from "./Hello";
-import Counter from "./Counter";
-import ClickCounter from "./ClickCounter";
-import { ClickTracker } from "./ClickTracker";
-import InteractiveWelcome from "./InteractiveWelcome";
+import React from "react";
+// import Hello from "./Hello";
+// import Counter from "./Counter";
+// import ClickCounter from "./ClickCounter";
+// import { ClickTracker } from "./ClickTracker";
+// import InteractiveWelcome from "./InteractiveWelcome";
 import Login from "./Login";
 import { UncontrolLogin } from "./UncontrolLogin";
 import { TodoList } from "./TodoList";
 import { Container } from "./Container";
 // import { DisplayLanguage } from "./DisplayLanguage";
-import { CreateLanguage } from "./CreateLanguage";
-import Sum from "./Sum";
+// import { CreateLanguage } from "./CreateLanguage";
+// import Sum from "./Sum";
 import GithubUserList from "./GithubUserList";
+import FilteredList from "./FilteredList";
 
 export function App() {
   // state = {
@@ -23,10 +24,10 @@ export function App() {
   //   });
   // };
 
-  const [showCounter, setShowCounter] = useState(true);
-  function handleToggleCounter() {
-    setShowCounter((s) => !s);
-  }
+  // const [showCounter, setShowCounter] = useState(true);
+  // function handleToggleCounter() {
+  //   setShowCounter((s) => !s);
+  // }
 
   return (
     <>
@@ -39,11 +40,11 @@ export function App() {
         </select> */}
       {/* <DisplayLanguage.Provider value={this.state.language}> */}
       <Container title={"My application"}>
-        <CreateLanguage />
+        {/* <CreateLanguage />
         <Hello />
         <InteractiveWelcome />
         <ClickCounter />
-        <ClickTracker />
+        <ClickTracker /> */}
         <Login />
         <UncontrolLogin />
         <TodoList
@@ -69,10 +70,11 @@ export function App() {
             );
           }}
         />
-        <Sum />
+        {/* <Sum />
         {showCounter && <Counter />}
-        <button onClick={handleToggleCounter}>Toggle Counter</button>
+        <button onClick={handleToggleCounter}>Toggle Counter</button> */}
         <GithubUserList />
+        <FilteredList />
       </Container>
       {/* </DisplayLanguage.Provider> */}
     </>
