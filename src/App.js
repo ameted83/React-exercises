@@ -6,6 +6,10 @@ import { ClickTracker } from "./ClickTracker";
 import InteractiveWelcome from "./InteractiveWelcome";
 import { Login } from "./Login";
 
+const onLogin = (state) => {
+  return console.log(state);
+};
+
 export class App extends React.Component {
   render() {
     return (
@@ -15,7 +19,7 @@ export class App extends React.Component {
         <Counter />
         <ClickCounter />
         <ClickTracker />
-        <Login />
+        <Login current={onLogin} />
       </div>
     );
   }

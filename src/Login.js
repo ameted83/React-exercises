@@ -14,15 +14,7 @@ export class Login extends React.Component {
     const checked = event.target.checked;
 
     this.setState({
-      [name]: type === "checkbox" ? checked : console.log(value),
-    });
-  };
-
-  onLogin = () => {
-    this.setState({
-      username: "Amelia",
-      password: "yes6163",
-      remember: true,
+      [name]: type === "checkbox" ? checked : value,
     });
   };
 
@@ -48,8 +40,13 @@ export class Login extends React.Component {
             checked={this.state.remember}
             onChange={this.handleInputChange}
           />
+          <button
+            onClick={() => this.props.current(this.state)}
+            disabled={(!this.state.username && !this.state.password) ?? true}
+          >
+            Invio
+          </button>
         </div>
-        <button onClick={this.onLogin}>Invio</button>
       </>
     );
   }
