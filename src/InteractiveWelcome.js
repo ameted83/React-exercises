@@ -3,14 +3,24 @@ import Welcome from "./Welcome";
 
 class InteractiveWelcome extends React.Component {
   state = {
-    username: "Amelia",
+    username: "",
+  };
+
+  handleInputChange = (event) => {
+    const value = event.target.value;
+
+    this.setState({ username: value });
   };
 
   render() {
     return (
       <>
-        <input name="username" value={this.state.username}></input>
-        <Welcome value={this.props.name} />
+        <input
+          name="username"
+          onChange={this.handleInputChange}
+          value={this.state.username}
+        ></input>
+        <Welcome value={this.state.username} />
       </>
     );
   }
