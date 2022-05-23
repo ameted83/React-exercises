@@ -18,14 +18,6 @@ export class Login extends React.Component {
     });
   };
 
-  onLogin = () => {
-    this.setState({
-      username: "Amelia",
-      password: "yes6163",
-      remember: true,
-    });
-  };
-
   handleResetState = () => {
     this.setState({
       username: "",
@@ -57,7 +49,14 @@ export class Login extends React.Component {
             onChange={this.handleInputChange}
           />
         </div>
-        <button onClick={this.onLogin}>Invio</button>
+        {(!this.state.username || !this.state.password) && (
+          <button
+            onClick={() => this.props.current(this.state)}
+            disabled={true}
+          >
+            Invio
+          </button>
+        )}
         <button onClick={this.handleResetState}>Reset</button>
       </>
     );
