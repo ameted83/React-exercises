@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from "react";
 
 const FilteredList = () => {
-  const [utente, setUtente] = useState([
+  const [utente] = useState([
     {
       id: 1,
       name: "Anna",
