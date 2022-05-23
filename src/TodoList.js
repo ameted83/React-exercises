@@ -28,7 +28,7 @@ export class TodoList extends React.Component {
   handleRemoveItem = (event) => {
     event.preventDefault();
     this.setState(() => {
-      return { todo: this.state.todos.pop() };
+      return { todo: this.state.todos.splice(0, 1) };
     });
   };
 
