@@ -13,6 +13,7 @@ import { Container } from "./Container";
 // import Sum from "./Sum";
 import GithubUserList from "./GithubUserList";
 import FilteredList from "./FilteredList";
+import CarDetails from "./CarDetails";
 
 export function App() {
   // state = {
@@ -75,6 +76,13 @@ export function App() {
         <button onClick={handleToggleCounter}>Toggle Counter</button> */}
         <GithubUserList />
         <FilteredList />
+        <CarDetails
+          initialData={{
+            model: "",
+            year: "",
+            color: "",
+          }}
+        />
       </Container>
       {/* </DisplayLanguage.Provider> */}
     </>
