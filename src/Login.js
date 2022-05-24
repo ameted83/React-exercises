@@ -41,7 +41,7 @@ export class Login extends React.Component {
             onChange={this.handleInputChange}
           />
           <button
-            onClick={() => this.props.current(this.state)}
+            onClick={() => this.props.currentState(this.state)}
             disabled={(!this.state.username && !this.state.password) ?? true}
           >
             Invio
