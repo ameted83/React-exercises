@@ -1,9 +1,10 @@
 import React, { useState } from "react";
+import { Route, Routes } from "react-router-dom";
 // import Hello from "./Hello";
 // import Counter from "./Counter";
 // import ClickCounter from "./ClickCounter";
 // import { ClickTracker } from "./ClickTracker";
-// import InteractiveWelcome from "./InteractiveWelcome";
+//  import InteractiveWelcome from "./InteractiveWelcome";
 // import Login from "./Login";
 // import { UncontrolLogin } from "./UncontrolLogin";
 // import { TodoList } from "./TodoList";
@@ -15,6 +16,7 @@ import { LanguageContext } from "./LanguageContext";
 // import GithubUserList from "./GithubUserList";
 // import FilteredList from "./FilteredList";
 // import CarDetails from "./CarDetails";
+import Welcome from "./Welcome";
 
 export function App() {
   const [language, setLanguage] = useState("en");
@@ -38,10 +40,14 @@ export function App() {
         <DisplayLanguage />
       </LanguageContext.Provider>
 
+      <Routes>
+        <Route path="/" element={<Welcome />} />
+      </Routes>
+
       {/* <Container title={"My application"}> */}
-      {/* <Hello />
-        <InteractiveWelcome />
-        <ClickCounter />
+      {/* <Hello /> */}
+      {/* <InteractiveWelcome /> */}
+      {/* <ClickCounter />
         <ClickTracker />  */}
       {/* <Login />
         <UncontrolLogin />
