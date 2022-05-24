@@ -17,7 +17,7 @@ import { LanguageContext } from "./LanguageContext";
 // import FilteredList from "./FilteredList";
 // import CarDetails from "./CarDetails";
 import Welcome from "./Welcome";
-// import Counter from "./Counter";
+import Counter from "./Counter";
 // import ShowGithubUser from "./ShowGithubUser";
 
 export function App() {
@@ -44,6 +44,7 @@ export function App() {
 
       <Routes>
         <Route path="/Welcome" element={<Welcome />} />
+        <Route path="/Counter" element={<Counter />} />
       </Routes>
 
       {/* <Hello /> */}
