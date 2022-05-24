@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Route, Routes } from "react-router-dom";
+import { Link, Route, Routes } from "react-router-dom";
 // import Hello from "./Hello";
 // import Counter from "./Counter";
 // import ClickCounter from "./ClickCounter";
@@ -8,7 +8,7 @@ import { Route, Routes } from "react-router-dom";
 // import Login from "./Login";
 // import { UncontrolLogin } from "./UncontrolLogin";
 // import { TodoList } from "./TodoList";
-// import { Container } from "./Container";
+import { Container } from "./Container";
 import { DisplayLanguage } from "./DisplayLanguage";
 import { LanguageContext } from "./LanguageContext";
 // import { CreateLanguage } from "./CreateLanguage";
@@ -42,11 +42,20 @@ export function App() {
         <DisplayLanguage />
       </LanguageContext.Provider>
 
-      <Routes>
-        <Route path="/Welcome" element={<Welcome />} />
-        <Route path="/Counter" element={<Counter />} />
-        <Route path="users:/username" element={<ShowGithubUser />} />
-      </Routes>
+      <Container>
+        <h1>My application</h1>
+        <div>
+          <Link to="/Welcome"> Home | </Link>
+          <Link to="/users:/username"> Chi sono | </Link>
+          <Link to="/Counter"> Counter | </Link>
+        </div>
+
+        <Routes>
+          <Route path="/Welcome" element={<Welcome />} />
+          <Route path="/Counter" element={<Counter />} />
+          <Route path="users:/username" element={<ShowGithubUser />} />
+        </Routes>
+      </Container>
 
       {/* <Hello /> */}
       {/* <InteractiveWelcome /> */}
