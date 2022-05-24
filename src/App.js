@@ -18,6 +18,7 @@ import { LanguageContext } from "./LanguageContext";
 // import CarDetails from "./CarDetails";
 import Welcome from "./Welcome";
 import Counter from "./Counter";
+import ShowGithubUser from "./ShowGithubUser";
 
 export function App() {
   const [language, setLanguage] = useState("en");
@@ -44,6 +45,7 @@ export function App() {
       <Routes>
         <Route path="/Welcome" element={<Welcome />} />
         <Route path="/Counter" element={<Counter />} />
+        <Route path="users:/username" element={<ShowGithubUser />} />
       </Routes>
 
       {/* <Container title={"My application"}> */}
