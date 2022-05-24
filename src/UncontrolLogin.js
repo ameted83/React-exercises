@@ -2,6 +2,14 @@ import React, { createRef } from "react";
 
 export class UncontrolLogin extends React.Component {
   _formRef = createRef();
+  _userRef = createRef();
+
+  state = {
+    username: "",
+    password: "",
+    remember: false,
+  };
+
   handleFormSubmit = (event) => {
     event.preventDefault();
 
@@ -12,10 +20,15 @@ export class UncontrolLogin extends React.Component {
     console.log({ username, password, remember });
   };
 
-  onLogin = () => {
-    this._formRef.current.elements.username.value = "Amelia";
-    this._formRef.current.elements.password.value = "yes6163";
-    this._formRef.current.elements.remeber.checked = true;
+  handleInputChange = (event) => {
+    const value = event.target.value;
+    const name = event.target.name;
+    const type = event.target.type;
+    const checked = event.target.checked;
+
+    this.setState({
+      [name]: type === "checkbox" ? checked : console.log(value),
+    });
   };
 
   render() {
@@ -24,15 +37,28 @@ export class UncontrolLogin extends React.Component {
         <h3>My Uncrontrolled Form</h3>
 
         <form ref={this._formRef} onSubmit={this.handleFormSubmit}>
-          <input name="username" defaultValue="Giulia" />
-          <input name="password" type="password" />
-          <input name="remember" type="checkbox" />
-
-          <button type="submit">Login</button>
-          <button type="reset">Reset</button>
-          <button type="button" onClick={this.onLogin}>
-            Prefill Form
+          <input
+            name="username"
+            ref={this._userRef}
+            onChange={this.handleInputChange}
+          />
+          <input
+            name="password"
+            type="password"
+            onChange={this.handleInputChange}
+          />
+          <input
+            name="remember"
+            type="checkbox"
+            onChange={this.handleInputChange}
+          />
+          <button
+            disabled={(!this.state.username || !this.state.password) ?? true}
+            onClick={() => this.props.currentState(this.state)}
+          >
+            Login
           </button>
+          <button type="reset">Reset</button>
         </form>
       </div>
     );
