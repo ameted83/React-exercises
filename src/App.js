@@ -8,7 +8,7 @@ import { Route, Routes } from "react-router-dom";
 // import Login from "./Login";
 // import { UncontrolLogin } from "./UncontrolLogin";
 // import { TodoList } from "./TodoList";
-import { Container } from "./Container";
+// import { Container } from "./Container";
 import { DisplayLanguage } from "./DisplayLanguage";
 import { LanguageContext } from "./LanguageContext";
 // import { CreateLanguage } from "./CreateLanguage";
@@ -17,8 +17,8 @@ import { LanguageContext } from "./LanguageContext";
 // import FilteredList from "./FilteredList";
 // import CarDetails from "./CarDetails";
 import Welcome from "./Welcome";
-import Counter from "./Counter";
-import ShowGithubUser from "./ShowGithubUser";
+// import Counter from "./Counter";
+// import ShowGithubUser from "./ShowGithubUser";
 
 export function App() {
   const [language, setLanguage] = useState("en");
@@ -42,13 +42,9 @@ export function App() {
         <DisplayLanguage />
       </LanguageContext.Provider>
 
-      <Container title={"My application"}>
-        <Routes>
-          <Route path="/Welcome" element={<Welcome />} />
-          <Route path="/Counter" element={<Counter />} />
-          <Route path="users:/username" element={<ShowGithubUser />} />
-        </Routes>
-      </Container>
+      <Routes>
+        <Route path="/Welcome" element={<Welcome />} />
+      </Routes>
 
       {/* <Hello /> */}
       {/* <InteractiveWelcome /> */}
