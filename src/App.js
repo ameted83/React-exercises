@@ -41,7 +41,7 @@ export function App() {
       </LanguageContext.Provider>
 
       <Routes>
-        <Route path="/" element={<Welcome />} />
+        <Route path="/Welcome" element={<Welcome />} />
       </Routes>
 
       {/* <Container title={"My application"}> */}
