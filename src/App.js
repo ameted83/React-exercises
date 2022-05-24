@@ -20,7 +20,7 @@ export class App extends React.Component {
         <Counter />
         <ClickCounter />
         <ClickTracker />
-        <Login current={onLogin} />
+        <Login currentState={onLogin} />
         <UncontrolLogin />
       </div>
     );
