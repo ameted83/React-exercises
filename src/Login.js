@@ -51,7 +51,7 @@ export class Login extends React.Component {
         </div>
         {(!this.state.username || !this.state.password) && (
           <button
-            onClick={() => this.props.current(this.state)}
+            onClick={() => this.props.currentState(this.state)}
             disabled={true}
           >
             Invio
