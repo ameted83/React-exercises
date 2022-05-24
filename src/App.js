@@ -8,7 +8,7 @@ import { Route, Routes } from "react-router-dom";
 // import Login from "./Login";
 // import { UncontrolLogin } from "./UncontrolLogin";
 // import { TodoList } from "./TodoList";
-// import { Container } from "./Container";
+import { Container } from "./Container";
 import { DisplayLanguage } from "./DisplayLanguage";
 import { LanguageContext } from "./LanguageContext";
 // import { CreateLanguage } from "./CreateLanguage";
@@ -42,13 +42,14 @@ export function App() {
         <DisplayLanguage />
       </LanguageContext.Provider>
 
-      <Routes>
-        <Route path="/Welcome" element={<Welcome />} />
-        <Route path="/Counter" element={<Counter />} />
-        <Route path="users:/username" element={<ShowGithubUser />} />
-      </Routes>
+      <Container title={"My application"}>
+        <Routes>
+          <Route path="/Welcome" element={<Welcome />} />
+          <Route path="/Counter" element={<Counter />} />
+          <Route path="users:/username" element={<ShowGithubUser />} />
+        </Routes>
+      </Container>
 
-      {/* <Container title={"My application"}> */}
       {/* <Hello /> */}
       {/* <InteractiveWelcome /> */}
       {/* <ClickCounter />
@@ -90,7 +91,6 @@ export function App() {
             color: "",
           }} 
         />*/}
-      {/* </Container>  */}
     </>
   );
 }
