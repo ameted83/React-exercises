@@ -17,6 +17,7 @@ import { LanguageContext } from "./LanguageContext";
 // import FilteredList from "./FilteredList";
 // import CarDetails from "./CarDetails";
 import Welcome from "./Welcome";
+import Counter from "./Counter";
 
 export function App() {
   const [language, setLanguage] = useState("en");
@@ -41,7 +42,8 @@ export function App() {
       </LanguageContext.Provider>
 
       <Routes>
-        <Route path="/" element={<Welcome />} />
+        <Route path="/Welcome" element={<Welcome />} />
+        <Route path="/Counter" element={<Counter />} />
       </Routes>
 
       {/* <Container title={"My application"}> */}
