@@ -1,7 +1,9 @@
+import { useParams } from "react-router-dom";
 import useGithubUser from "./UseGithubUser";
 
-const GithubUser = ({ username }) => {
-  const { data, load, err, onFetchUser } = useGithubUser(username);
+const GithubUser = () => {
+  const { username } = useParams();
+  const { data, loading, error } = useGithubUser(username);
 
   function handleGetUserData() {
     onFetchUser(username);
@@ -10,8 +12,8 @@ const GithubUser = ({ username }) => {
   return (
     <div>
       <button onClick={handleGetUserData}> Load</button>
-      {load && <h2>load...</h2>}
-      {err && <h2>There is an error</h2>}
+      {loading && <h2>Loading...</h2>}
+      {error && <h2>There is an error</h2>}
       {data && <h1>{data.name}</h1>}
     </div>
   );

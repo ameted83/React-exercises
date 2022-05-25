@@ -21,6 +21,7 @@ import Counter from "./Counter";
 import UseGithubUser from "./UseGithubUser";
 
 //import ShowGithubUser from "./ShowGithubUser";
+import GithubUser from "./GithubUser";
 
 export function App() {
   const [language, setLanguage] = useState("en");
@@ -60,8 +61,9 @@ export function App() {
           <Route path="/users:/name" element={<GithubUserList />}>
             <Route index element={<button>Add a user and select it</button>} />
           </Route>
-          <Route path="users" element={<UseGithubUser />} />
-
+          <Route path="users" element={<UseGithubUser />}>
+            <Route path=":username" element={<GithubUser />} />
+          </Route>
           <Route
             path="*"
             element={
