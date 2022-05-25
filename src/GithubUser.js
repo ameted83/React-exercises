@@ -9,7 +9,7 @@ const GithubUser = ({ username }) => {
         return response.json();
       })
       .then((json) => {
-        //  console.log(json);
+        console.log(json);
         setData(json);
       });
   }, [username]);

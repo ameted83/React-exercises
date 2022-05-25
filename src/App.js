@@ -18,6 +18,7 @@ import GithubUserList from "./GithubUserList";
 // import CarDetails from "./CarDetails";
 import Welcome from "./Welcome";
 import Counter from "./Counter";
+import UseGithubUser from "./UseGithubUser";
 //import ShowGithubUser from "./ShowGithubUser";
 
 export function App() {
@@ -48,6 +49,7 @@ export function App() {
           <Link to="/Welcome"> Home | </Link>
           <Link to="/users:/username"> Chi sono | </Link>
           <Link to="/Counter"> Counter | </Link>
+          <Link to="users">Users</Link>
         </div>
 
         <Routes>
@@ -57,7 +59,7 @@ export function App() {
           <Route path="/users:/name" element={<GithubUserList />}>
             <Route index element={<button>Add a user and select it</button>} />
           </Route>
-
+          <Route path="users" element={<UseGithubUser />} />
           <Route
             path="*"
             element={
