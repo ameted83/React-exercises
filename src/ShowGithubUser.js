@@ -2,10 +2,10 @@ import React from "react";
 import GithubUser from "./GithubUser";
 
 const ShowGithubUser = (username) => {
-  console.log(username);
+  // console.log(username);
   return (
     <div>
-      <GithubUser username="ameted83" />
+      <GithubUser name={username} />
     </div>
   );
 };

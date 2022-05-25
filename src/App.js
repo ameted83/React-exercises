@@ -13,12 +13,12 @@ import { DisplayLanguage } from "./DisplayLanguage";
 import { LanguageContext } from "./LanguageContext";
 // import { CreateLanguage } from "./CreateLanguage";
 // import Sum from "./Sum";
-// import GithubUserList from "./GithubUserList";
+import GithubUserList from "./GithubUserList";
 // import FilteredList from "./FilteredList";
 // import CarDetails from "./CarDetails";
 import Welcome from "./Welcome";
 import Counter from "./Counter";
-import ShowGithubUser from "./ShowGithubUser";
+//import ShowGithubUser from "./ShowGithubUser";
 
 export function App() {
   const [language, setLanguage] = useState("en");
@@ -53,7 +53,7 @@ export function App() {
         <Routes>
           <Route path="/Welcome" element={<Welcome />} />
           <Route path="/Counter" element={<Counter />} />
-          <Route path="users:/username" element={<ShowGithubUser />} />
+          <Route path="/users:/name" element={<GithubUserList />} />
           <Route
             path="*"
             element={
