@@ -39,6 +39,8 @@ export class UncontrolLogin extends React.Component {
         <form ref={this._formRef} onSubmit={this.handleFormSubmit}>
           <input
             name="username"
+            autoFocus
+            onFocus={(e) => e.currentTarget.select()}
             ref={this._userRef}
             onChange={this.handleInputChange}
           />
