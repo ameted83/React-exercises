@@ -2,7 +2,7 @@ import ReactDOM from "react-dom";
 import { Root } from "./Root";
 import "./index.css";
 import { store } from "./states/store";
-// import { counterReducer } from "./states/counterReducer";
+import { counterReducer } from "./states/counterReducer";
 import { todosReducer } from "./states/TodosReducer";
 import { nanoid } from "nanoid";
 
@@ -14,10 +14,10 @@ store.subscribe(() => {
   console.log(store.getState());
 });
 
-// store.dispatch(counterReducer.actions.increment(5));
-// store.dispatch(counterReducer.actions.increment(3));
-// store.dispatch(counterReducer.actions.increment(6));
-// store.dispatch(counterReducer.actions.reset());
+store.dispatch(counterReducer.actions.increment(5));
+store.dispatch(counterReducer.actions.increment(3));
+store.dispatch(counterReducer.actions.increment(6));
+store.dispatch(counterReducer.actions.reset());
 
 store.dispatch(
   todosReducer.actions.add({
