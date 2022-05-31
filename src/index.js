@@ -2,11 +2,7 @@ import ReactDOM from "react-dom";
 import { Root } from "./Root";
 import "./index.css";
 import { store } from "./state/Store";
-import {
-  incrementCounter,
-  decrementCounter,
-  resetCounter,
-} from "./state/CounterReducer";
+import { incrementCounter } from "./state/CounterReducer";
 
 const root = document.querySelector("#root");
 
@@ -17,6 +13,3 @@ store.subscribe(() => {
 });
 
 store.dispatch(incrementCounter(5));
-store.dispatch(decrementCounter(3));
-store.dispatch(decrementCounter(6));
-store.dispatch(resetCounter());
