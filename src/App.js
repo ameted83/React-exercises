@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Link, Route, Routes } from "react-router-dom";
+// import React, { useState } from "react";
+// import { Link, Route, Routes } from "react-router-dom";
 // import Hello from "./Hello";
 // import Counter from "./Counter";
 // import ClickCounter from "./ClickCounter";
@@ -9,26 +9,26 @@ import { Link, Route, Routes } from "react-router-dom";
 // import { UncontrolLogin } from "./UncontrolLogin";
 // import { TodoList } from "./TodoList";
 import { Container } from "./Container";
-import { DisplayLanguage } from "./DisplayLanguage";
-import { LanguageContext } from "./LanguageContext";
+// import { DisplayLanguage } from "./DisplayLanguage";
+// import { LanguageContext } from "./LanguageContext";
 // import { CreateLanguage } from "./CreateLanguage";
 // import Sum from "./Sum";
-import GithubUserList from "./GithubUserList";
+// import GithubUserList from "./GithubUserList";
 // import FilteredList from "./FilteredList";
 // import CarDetails from "./CarDetails";
-import Welcome from "./Welcome";
-import Counter from "./Counter";
-import UseGithubUser from "./UseGithubUser";
+// import Welcome from "./Welcome";
+// import Counter from "./Counter";
+// import UseGithubUser from "./UseGithubUser";
 
 //import ShowGithubUser from "./ShowGithubUser";
-import GithubUser from "./GithubUser";
+// import GithubUser from "./GithubUser";
 
 export function App() {
-  const [language, setLanguage] = useState("en");
+  // const [language, setLanguage] = useState("en");
 
-  const handleLanguageChange = (event) => {
-    setLanguage(event.target.value);
-  };
+  // const handleLanguageChange = (event) => {
+  //   setLanguage(event.target.value);
+  // };
 
   // const [showCounter, setShowCounter] = useState(true);
   // function handleToggleCounter() {
@@ -37,17 +37,18 @@ export function App() {
 
   return (
     <>
-      <select value={language} onChange={handleLanguageChange}>
+      {/* <select value={language} onChange={handleLanguageChange}>
         <option value="en">English</option>
         <option value="it">Italiano</option>
       </select>
       <LanguageContext.Provider value={language}>
         <DisplayLanguage />
-      </LanguageContext.Provider>
+      </LanguageContext.Provider> */}
 
       <Container>
         <h1>My application</h1>
-        <div>
+      </Container>
+      {/* <div>
           <Link to="/Welcome"> Home | </Link>
           <Link to="/users:/username"> Chi sono | </Link>
           <Link to="/Counter"> Counter | </Link>
@@ -72,8 +73,7 @@ export function App() {
               </div>
             }
           />
-        </Routes>
-      </Container>
+        </Routes>  */}
 
       {/* <Hello /> */}
       {/* <InteractiveWelcome /> */}
