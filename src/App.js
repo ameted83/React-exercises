@@ -1,5 +1,5 @@
 // import React, { useState } from "react";
-// import { Link, Route, Routes } from "react-router-dom";
+import { Link, Route, Routes } from "react-router-dom";
 // import Hello from "./Hello";
 // import Counter from "./Counter";
 // import ClickCounter from "./ClickCounter";
@@ -13,15 +13,15 @@ import { Container } from "./Container";
 // import { LanguageContext } from "./LanguageContext";
 // import { CreateLanguage } from "./CreateLanguage";
 // import Sum from "./Sum";
-// import GithubUserList from "./GithubUserList";
+import GithubUserList from "./GithubUserList";
 // import FilteredList from "./FilteredList";
 // import CarDetails from "./CarDetails";
-// import Welcome from "./Welcome";
+import Welcome from "./Welcome";
 // import Counter from "./Counter";
-// import UseGithubUser from "./UseGithubUser";
+import UseGithubUser from "./UseGithubUser";
 
 //import ShowGithubUser from "./ShowGithubUser";
-// import GithubUser from "./GithubUser";
+import GithubUser from "./GithubUser";
 
 export function App() {
   // const [language, setLanguage] = useState("en");
@@ -48,32 +48,32 @@ export function App() {
       <Container>
         <h1>My application</h1>
       </Container>
-      {/* <div>
-          <Link to="/Welcome"> Home | </Link>
-          <Link to="/users:/username"> Chi sono | </Link>
-          <Link to="/Counter"> Counter | </Link>
-          <Link to="users">Users</Link>
-        </div>
+      <div>
+        <Link to="/Welcome"> Home | </Link>
+        <Link to="/users:/username"> Chi sono | </Link>
+        <Link to="/Counter"> Counter | </Link>
+        <Link to="users">Users</Link>
+      </div>
 
-        <Routes>
-          <Route path="/Welcome" element={<Welcome />} />
-          <Route path="/Counter" element={<Counter />} />
+      <Routes>
+        <Route path="/Welcome" element={<Welcome />} />
+        {/* <Route path="/Counter" element={<Counter />} /> */}
 
-          <Route path="/users:/name" element={<GithubUserList />}>
-            <Route index element={<button>Add a user and select it</button>} />
-          </Route>
-          <Route path="users" element={<UseGithubUser />}>
-            <Route path=":username" element={<GithubUser />} />
-          </Route>
-          <Route
-            path="*"
-            element={
-              <div>
-                <p>Not found</p> <Link to="/Welcome">Go Home</Link>
-              </div>
-            }
-          />
-        </Routes>  */}
+        <Route path="/users:/name" element={<GithubUserList />}>
+          <Route index element={<button>Add a user and select it</button>} />
+        </Route>
+        <Route path="users" element={<UseGithubUser />}>
+          <Route path=":username" element={<GithubUser />} />
+        </Route>
+        <Route
+          path="*"
+          element={
+            <div>
+              <p>Not found</p> <Link to="/Welcome">Go Home</Link>
+            </div>
+          }
+        />
+      </Routes>
 
       {/* <Hello /> */}
       {/* <InteractiveWelcome /> */}
