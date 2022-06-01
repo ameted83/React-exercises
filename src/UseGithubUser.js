@@ -4,8 +4,8 @@ import { Link, Outlet } from "react-router-dom";
 const fetcher = (url) => fetch(url).then((response) => response.json());
 
 function useGithubUser() {
-  const { data, error, mutate } = useSWR(
-    `https://api.github.com/users`,
+  const { data, error, mutate } = useSWR( username ? 
+    `https://api.github.com/users${username}` : null,
     fetcher
   );
 
