@@ -3,8 +3,8 @@ import { Root } from "./Root";
 import "./index.css";
 // import { store } from "./states/store";
 // import { counterReducer } from "./states/counterReducer";
-// // import { todosReducer } from "./states/todosReducer";
-// // import { nanoid } from "nanoid";
+// import { todosReducer } from "./states/todosReducer";
+// import { nanoid } from "nanoid";
 
 const root = document.querySelector("#root");
 
