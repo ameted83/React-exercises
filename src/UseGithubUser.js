@@ -3,7 +3,7 @@ import { Link, Outlet } from "react-router-dom";
 
 const fetcher = (url) => fetch(url).then((response) => response.json());
 function useGithubUser() {
-  const { data, error } = useSWR(`https://api.github.com/users`, fetcher);
+  const { data, error } = useSWR( username ? `https://api.github.com/users${username}` : null, fetcher);
 
   return (
     <>
